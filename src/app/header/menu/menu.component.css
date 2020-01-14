@@ -1,0 +1,29 @@
+li {
+    float: right;
+    height: 5vh;
+    margin: 0 1vw;
+  }
+
+  li a {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: center;
+    padding: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    transition: all 0.25s ease;
+  }
+  
+  li a:hover:not(.active) {
+    color: red;
+    transform: scale(1.1);
+  }
+  
+  .active {
+    border-bottom: 1px solid black;
+  }
+
+  #login {
+      margin-right: 1vw;
+  }
