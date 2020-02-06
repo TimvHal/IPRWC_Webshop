@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
 import { BodyModule } from './body/body.module';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterComponent } from './footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     HeaderModule,
-    BodyModule
+    BodyModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

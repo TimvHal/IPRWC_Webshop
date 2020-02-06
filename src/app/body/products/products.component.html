@@ -1,1 +1,13 @@
-<p>products works!</p>
+<app-searchbar></app-searchbar>
+
+<div class="container">
+    <ul class="car-list">
+        <div class="row">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4" align="center" *ngFor="let car of cars">
+                <li class="car-item">
+                    <app-car [car]="car"></app-car>
+                </li>
+            </div>
+        </div>
+    </ul>
+</div>

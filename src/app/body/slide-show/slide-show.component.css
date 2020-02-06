@@ -1,0 +1,11 @@
+.slideshow {
+    position: relative;
+    vertical-align: center;
+    min-width: 40vw;
+    max-width: 40vw;
+    min-height: 20vw;
+    max-height: 20vw;
+    margin-top: 7.5vh;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgb(68, 68, 68);
+}

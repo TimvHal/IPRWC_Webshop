@@ -4,7 +4,8 @@ import { BodyComponent } from './body.component';
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { ProductsComponent } from './products/products.component';
 import { SearchbarComponent } from './products/searchbar/searchbar.component';
-import { CarsComponent } from './products/cars/cars.component';
+import { CarComponent } from './products/car/car.component';
+import { BackgroundComponent } from './background/background.component';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { CarsComponent } from './products/cars/cars.component';
     SlideShowComponent,
     ProductsComponent,
     SearchbarComponent,
-    CarsComponent,
+    CarComponent,
+    BackgroundComponent,
   ],
   imports: [
     BrowserModule

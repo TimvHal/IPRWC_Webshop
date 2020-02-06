@@ -1,0 +1,19 @@
+.row {
+    margin-top: 5vh;
+}
+
+.col-xs-3 {
+    margin-top: 15vh;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+}
+
+.img-fluid {
+    position: relative;
+    max-width: 300px;
+    bottom: 0%;
+}
+
+app-background {
+    position: absolute;
+}

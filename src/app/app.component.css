@@ -1,0 +1,11 @@
+app-header {
+    z-index: 3;
+}
+
+app-body {
+    z-index: 1;
+}
+
+app-footer {
+    z-index: 2;
+}
