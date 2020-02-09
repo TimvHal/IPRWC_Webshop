@@ -5,17 +5,18 @@ import { OrderPageComponent } from './order-page/order-page.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { AuthComponent } from './auth/auth.component';
 import { DetailsComponent } from './details/details.component';
+import { AuthGuard } from './auth/auth.guard';
 
 
 const routes: Routes = [
   { path:'', redirectTo: '/main', pathMatch: 'full' },
   { path: 'main', component: MainComponent },
   { path: 'auth', component: AuthComponent },
-  { path: 'orders', component: OrderPageComponent },
-  { path: 'shoppingcart', component: ShoppingCartComponent },
   { path: 'details', children: [
     { path: ':id', component: DetailsComponent }
   ]},
+  { path: 'orders', component: OrderPageComponent, canActivate:[AuthGuard] },
+  { path: 'shoppingcart', component: ShoppingCartComponent, canActivate:[AuthGuard] },
   {path: '**', redirectTo: '/main'}
 ];
 

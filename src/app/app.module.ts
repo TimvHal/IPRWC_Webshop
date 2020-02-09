@@ -13,6 +13,8 @@ import { AuthComponent } from './auth/auth.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { BackgroundComponent } from './background/background.component';
 import { DetailsComponent } from './details/details.component';
+import { FormsModule } from '@angular/forms';
+import { CartItemComponent } from './shopping-cart/cart-item/cart-item.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +25,16 @@ import { DetailsComponent } from './details/details.component';
     AuthComponent,
     ShoppingCartComponent,
     BackgroundComponent,
-    DetailsComponent
+    DetailsComponent,
+    CartItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HeaderModule,
     BodyModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,30 @@
-<p>auth works!</p>
+<div class="container d-flex justify-content-center">
+    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
+        <div class="form-group entry" *ngIf="!isLoginMode">
+            <label for="name" class="label">Full name</label>
+            <input type="text" #email class="form-control" ngModel name="name" required>
+        </div>
+        <div class="form-group entry">
+            <label for="email" class="label">Email</label>
+            <input type="email" #email class="form-control" ngModel name="email" required>
+            
+        </div>
+        <div class="form-group entry">
+            <label for="password" class="label">Password</label>
+            <input type="password" #password class="form-control" ngModel name="password" required minlength="8">
+        </div>
+        <div class="form-group entry" *ngIf="!isLoginMode">
+            <label for="confirmPassword" class="label">Confirm password</label>
+            <input type="password" #password class="form-control" ngModel name="confirm_password" required minlength="8">
+            <p *ngIf="!wrongPasswordBool" style="text-align: center; color: red;">De wachtwoorden komen niet overeen.</p>
+        </div>
+        <div>
+            <button 
+                class="btn btn-primary" 
+                type="submit" 
+                [disabled]="!authForm.valid">
+                    {{isLoginMode ? 'Login' : 'Register'}}</button>
+            <p class="link"><a (click)="onSwitchMode()">{{isLoginMode ? 'No account?' : 'Already an account?'}}</a></p>
+        </div>
+    </form>
+</div>

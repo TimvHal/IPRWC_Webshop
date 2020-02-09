@@ -18,6 +18,7 @@
     <hr>
     <div class="buttons">
         <button id="back" class="btn btn-primary" routerLink="/main">&larr; Back</button>
-        <button id="add-to-cart" class="btn btn-primary">&#x2b; Add to cart</button>
+        <button id="add-to-cart" class="btn btn-primary" (click)="addToCart()">&#x2b; Add to cart</button>
+        <a id="message">{{ this.message }}</a>
     </div>
 </div>

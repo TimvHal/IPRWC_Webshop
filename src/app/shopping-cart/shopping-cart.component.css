@@ -1,0 +1,33 @@
+.container {
+    margin-top: 7.5vh;
+    position: relative;
+    display: inline-block;
+}
+
+.shopping-cart {
+    list-style: none;
+    background-color: rgb(200, 200, 200, 0.5);
+    padding: 2em;
+}
+
+.cart-item {
+    background-color: rgb(200, 200, 200, 0.5);
+    padding: 1em;
+    margin: 0.5em 0;
+}
+
+#delete {
+    margin: 0 1em;
+    margin-top: 2em;
+    background-color: red;
+    border-color: red;
+}
+
+#delete:hover {
+    background-color: darkred;
+    border-color: darkred;
+}
+
+#right-column {
+    border-left: 1px solid grey;
+}

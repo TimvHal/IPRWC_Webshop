@@ -1,1 +1,16 @@
-<p>shopping-cart works!</p>
+<div class="container d-flex justify-content-center">
+    <ul class="shopping-cart">
+        <div class="row" *ngFor="let item of items">
+            <li class="cart-item">
+                <div class="row">
+                    <div class="xs-col-6">
+                        <app-cart-item [item]="item"></app-cart-item>
+                    </div>
+                    <div id="right-column" class="xs-col-6">
+                        <button id="delete" class="btn btn-primary" (click)="deleteItem(item.cartItemId)">Delete</button>
+                    </div>
+                </div>
+            </li>
+        </div>
+    </ul>
+</div>
