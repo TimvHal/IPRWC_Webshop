@@ -11,6 +11,8 @@ export class Car {
         public modelYear:number,
         public status:String,
         public isSold:boolean,
-        public dateAdded:String
+        public dateAdded:String,
+        public imageUrl:String
     ) {}
+
 }

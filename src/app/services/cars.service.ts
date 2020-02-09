@@ -18,6 +18,14 @@ export class CarService {
         .subscribe(completed);
     }
 
+    public getCar(completed, id: String) {
+        this.httpService.get('car/' + id)
+        .pipe(map(response => {
+            return <Car[]> response;
+        }))
+        .subscribe(completed)
+    } 
+
     public postCar(car:Car) {
         this.httpService.post('car', car)
         .subscribe(data => {

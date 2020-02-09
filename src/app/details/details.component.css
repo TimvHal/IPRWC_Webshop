@@ -1,0 +1,56 @@
+.container ::ng-deep {    
+    position: relative;
+    display: inline-block;
+    left: 30%;
+    max-width: 42vw;
+    margin-top: 7.5vh;
+    margin-bottom: 5h;
+    display: inline-block;
+    background-color: rgba(200, 200, 200, 0.5);
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgb(32, 32, 32);
+    overflow-wrap: normal;
+    color: white;
+}
+
+.car-image {
+    margin-top: 1em;
+    width: 40vw;
+    object-fit: fill;
+}
+
+.text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.specs {
+    margin-left: 1em;
+}
+
+.buttons {
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+#back, #add-to-cart {
+    margin: 0 0.5em;
+    font-weight: bold;
+}
+
+#back {
+    margin-left: 0;
+}
+
+#add-to-cart ::ng-deep {
+    background-color: green;
+    border-color: green;
+}
+
+#add-to-cart:hover {
+    background-color: rgb(0, 100, 0);
+    border-color: rgb(0, 100, 0);
+}
+

@@ -1,0 +1,23 @@
+<div class="container">
+    <img class="car-image" src="{{ selectedCar.imageUrl }}" alt="{{ selectedCar.brand + ' ' + selectedCar.model }}">
+    <div class="text">
+        <div class="name">{{ selectedCar.brand + ' ' + selectedCar.model }}</div>
+        <div class="price">{{ selectedCar.price }} €</div>
+    </div>
+    <hr>
+    <div class="specs">
+        <div class="brand"><b>Brand:</b> {{ selectedCar.brand }}</div>
+        <div class="model"><b>Model:</b> {{ selectedCar.model }}</div>
+        <div class="description"><b>Description:</b> {{ selectedCar.desc }}</div>
+        <div class="engine"><b>Engine:</b> {{ selectedCar.engine }}</div>
+        <div class="power"><b>Power:</b> {{ selectedCar.power }}</div>
+        <div class="model-year"><b>Buildyear:</b> {{ selectedCar.modelYear }}</div>
+        <div class="status"><b>Status:</b> {{ this.getStatus() }}</div>
+        <div class="date-added"><b>Date added:</b> {{ this.getDate() }}</div>
+    </div>
+    <hr>
+    <div class="buttons">
+        <button id="back" class="btn btn-primary" routerLink="/main">&larr; Back</button>
+        <button id="add-to-cart" class="btn btn-primary">&#x2b; Add to cart</button>
+    </div>
+</div>

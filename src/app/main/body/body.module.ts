@@ -5,7 +5,7 @@ import { SlideShowComponent } from './slide-show/slide-show.component';
 import { ProductsComponent } from './products/products.component';
 import { SearchbarComponent } from './products/searchbar/searchbar.component';
 import { CarComponent } from './products/car/car.component';
-import { BackgroundComponent } from './background/background.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -13,11 +13,11 @@ import { BackgroundComponent } from './background/background.component';
     SlideShowComponent,
     ProductsComponent,
     SearchbarComponent,
-    CarComponent,
-    BackgroundComponent,
+    CarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule
   ],
   exports: [BodyComponent],
   providers: [],

@@ -1,11 +1,16 @@
+app-background {
+    position: absolute;
+    z-index: -1;
+}
+
 app-header {
     z-index: 3;
 }
 
-app-body {
-    z-index: 1;
-}
-
 app-footer {
+    position: relative;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
     z-index: 2;
 }

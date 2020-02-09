@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header.component';
 import { MenuComponent } from './menu/menu.component';
 
@@ -10,7 +11,8 @@ import { MenuComponent } from './menu/menu.component';
     MenuComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule
   ],
   exports: [HeaderComponent],
   providers: [],
