@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            <img class="car-image" src="{{ car.imageUrl }}" alt="car">            
+        </div>
+        <div class="col-xs-6">
+            <div class="info">
+                <div class="row">
+                    <ul class="info-list">
+                        <li><a class="title"><b>Article: </b></a></li>
+                        <li><a class="id"><b>ID:</b> {{ car.articleId }}</a></li>
+                        <li><a class="name"><b>Name:</b> {{ car.brand }}  {{ car.model }}</a></li>
+                        <li><a class="price"><b>price</b> {{ car.price }}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

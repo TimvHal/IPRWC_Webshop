@@ -1,0 +1,36 @@
+.container {
+    max-width: 50vw;
+}
+
+.add-product {
+    margin-top: 7.5vh;
+}
+
+.all-products {
+    min-width: 40vw;
+    background-color: rgba(200, 200, 200, 0.5);
+    margin-top: 7.5vh;
+    margin-bottom: 7.5vh;
+    list-style: none;
+    padding-top: 1em;
+    text-align: center;
+
+}
+
+#delete {
+    margin-top: 4em;
+    margin-left: 2em;
+    background-color: red;
+    border-color: red;
+}
+
+#delete:hover {
+    background-color: darkred;
+    border-color: darkred;
+}
+
+#delete:active:focus {
+    background-color: red;
+    border-color: red;
+    box-shadow: none;
+}

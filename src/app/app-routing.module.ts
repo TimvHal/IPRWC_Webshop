@@ -6,6 +6,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { AuthComponent } from './auth/auth.component';
 import { DetailsComponent } from './details/details.component';
 import { AuthGuard } from './auth/auth.guard';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { AdminGuard } from './auth/admin.guard';
 
 
 const routes: Routes = [
@@ -17,7 +19,8 @@ const routes: Routes = [
   ]},
   { path: 'orders', component: OrderPageComponent, canActivate:[AuthGuard] },
   { path: 'shoppingcart', component: ShoppingCartComponent, canActivate:[AuthGuard] },
-  {path: '**', redirectTo: '/main'}
+  { path: 'adminpanel', component: AdminPanelComponent, canActivate:[AdminGuard] },
+  { path: '**', redirectTo: '/main'}
 ];
 
 @NgModule({

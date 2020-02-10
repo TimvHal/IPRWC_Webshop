@@ -17,6 +17,8 @@ import { FormsModule } from '@angular/forms';
 import { CartItemComponent } from './shopping-cart/cart-item/cart-item.component';
 import { OrderComponent } from './order-page/order/order.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { ProductComponent } from './admin-panel/product/product.component';
+import { AddProductComponent } from './admin-panel/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
     DetailsComponent,
     CartItemComponent,
     OrderComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    ProductComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,

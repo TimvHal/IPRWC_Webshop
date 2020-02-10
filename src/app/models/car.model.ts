@@ -4,7 +4,7 @@ export class Car {
         public articleId:String,
         public brand:String,
         public model:String,
-        public desc:String,
+        public description:String,
         public price:number,
         public engine:String,
         public power:number,

@@ -1,1 +1,24 @@
-<p>admin-panel works!</p>
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="add-product">
+            <app-add-product></app-add-product>
+        </div>
+    </div>
+    <hr>
+    <div class="row d-flex justify-content-center">
+        <ul class="all-products">
+            <a class="message">{{ this.message }}</a>
+            <li class="product" *ngFor="let car of cars">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <app-product [car]="car"></app-product>
+                    </div>
+                    <div class="col-xs-6">
+                        <button id="delete" class="btn btn-primary" (click)="deleteCar(car.articleId)">Delete</button>
+                    </div>
+                </div>
+                <hr>
+            </li>
+        </ul>
+    </div>
+</div>
