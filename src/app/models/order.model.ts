@@ -1,10 +1,10 @@
 export class Order {
 
     constructor(
-        public orderId:String,
         public articleId:String,
-        public userEmail:String,
-        public orderStatus:String,
-        public dateBought:String
+        public email:String,
+        public name:String,
+        public price:number,
+        public orderStatus:String
     ) {}
 }

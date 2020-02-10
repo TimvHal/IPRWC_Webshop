@@ -1,1 +1,12 @@
-<p>order-page works!</p>
+<div class="container d-flex justify-content-center">
+    <ul class="orders">
+        <a class="message" [ngStyle]="{'background-color':emptyOrders ? '#ffffff80' : 'transparent' }">{{ message }}</a>
+        <div class="row" *ngFor="let order of orders">
+            <li class="order">
+                <div class="row">
+                    <app-order [order]="order"></app-order>
+                </div>
+            </li>
+        </div>
+    </ul>
+</div>

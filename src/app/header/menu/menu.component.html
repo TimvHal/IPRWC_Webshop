@@ -1,4 +1,6 @@
-<li routerLinkActive="active"><a routerLink="/auth">Login</a></li>
-<li routerLinkActive="active"><a routerLink="/shoppingcart">Cart</a></li>
-<li routerLinkActive="active"><a routerLink="/orders">Orders</a></li>
+<li *ngIf="isLoggedIn()"><button class="btn btn-primary" routerLink="/main" (click)="logout()">Logout</button></li>
+<li *ngIf="!isLoggedIn()" routerLinkActive="active"><button class="btn btn-primary" routerLink="/auth">Login</button></li>
+<li routerLinkActive="active"><button class="btn btn-primary" routerLink="/shoppingcart">Cart</button></li>
+<li routerLinkActive="active"><button class="btn btn-primary" routerLink="/orders">Orders</button></li>
+<li *ngIf="isAdmin()"><button class="btn btn-primary">Admin</button></li>
 

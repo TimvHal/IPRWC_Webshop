@@ -1,5 +1,6 @@
 <div class="container d-flex justify-content-center">
     <ul class="shopping-cart">
+        <a class="message" [ngStyle]="{'background-color':emptyCart ? '#ffffff80' : 'transparent' }">{{ message }}</a>
         <div class="row" *ngFor="let item of items">
             <li class="cart-item">
                 <div class="row">
@@ -11,6 +12,10 @@
                     </div>
                 </div>
             </li>
+        </div>
+        <div class="row">
+            <a *ngIf="!emptyCart" class="total-price">Total: {{ totalPrice }} €</a>
+            <button *ngIf="!emptyCart" id="checkout" class="btn btn-primary" (click)="orderItems()">Order</button>
         </div>
     </ul>
 </div>

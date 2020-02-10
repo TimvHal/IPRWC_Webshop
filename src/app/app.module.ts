@@ -15,6 +15,8 @@ import { BackgroundComponent } from './background/background.component';
 import { DetailsComponent } from './details/details.component';
 import { FormsModule } from '@angular/forms';
 import { CartItemComponent } from './shopping-cart/cart-item/cart-item.component';
+import { OrderComponent } from './order-page/order/order.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { CartItemComponent } from './shopping-cart/cart-item/cart-item.component
     ShoppingCartComponent,
     BackgroundComponent,
     DetailsComponent,
-    CartItemComponent
+    CartItemComponent,
+    OrderComponent,
+    AdminPanelComponent
   ],
   imports: [
     BrowserModule,

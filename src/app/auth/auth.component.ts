@@ -19,7 +19,7 @@ export class AuthComponent {
  
   constructor(private userService: UserService,
     private authService: AuthService,
-    private router: Router) { }
+    private router: Router) { } 
 
   onSwitchMode() {
     this.isLoginMode = !this.isLoginMode;
@@ -55,7 +55,7 @@ export class AuthComponent {
           this.onSwitchMode()
         });
       }else{
-        this.wrongPasswordBool= false;
+        this.wrongPasswordBool = false;
       }
     }
 

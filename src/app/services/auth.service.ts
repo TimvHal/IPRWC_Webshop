@@ -4,11 +4,13 @@ import { UserService } from "./user.service";
 import { map, tap } from "rxjs/operators";
 import { User } from "../models/user.model";
 import { Router } from "@angular/router";
+import { MenuComponent } from '../header/menu/menu.component';
 
 @Injectable({ providedIn: "root" })
 export class AuthService {
   public user: User;
   public token: string;
+  public loggedIn: boolean = false;
 
   constructor(
     private router: Router,
@@ -30,6 +32,8 @@ export class AuthService {
     this.getToken(
       token => {
         this.validateToken(token, success, error);
+        this.getUserFromDatabase();
+        this.loggedIn = true;
       },
       err => {
         this.clearAuth();
@@ -80,6 +84,7 @@ export class AuthService {
       () => {
         this.token = loadedToken;
         this.getUserFromDatabase();
+        this.loggedIn = true;
         this.router.navigate(["main"]);
       },
       err => {
@@ -94,7 +99,8 @@ export class AuthService {
         this.user = new User(
           receivedData.email,
           receivedData.name,
-          receivedData.password
+          receivedData.password,
+          receivedData.isAdmin
         );
       })
     );
@@ -103,6 +109,7 @@ export class AuthService {
   public clearAuth() {
     this.user = null;
     this.token = null;
+    this.loggedIn = false;
     this.httpService.headers = this.httpService.headers.delete("Authorization");
     localStorage.removeItem("token");
   }
@@ -126,5 +133,13 @@ export class AuthService {
       )
       .subscribe(next, error, complete);
   }
+
+  isAdmin() {
+    if(!this.loggedIn) {
+      return false;
+    }
+    return this.user.isAdmin;
+  }
+
   
 }

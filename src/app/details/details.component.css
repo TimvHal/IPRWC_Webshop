@@ -4,13 +4,13 @@
     left: 30%;
     max-width: 42vw;
     margin-top: 7.5vh;
-    margin-bottom: 5h;
     display: inline-block;
     background-color: rgba(200, 200, 200, 0.5);
     border-radius: 5px;
     box-shadow: 5px 5px 15px rgb(32, 32, 32);
     overflow-wrap: normal;
     color: white;
+    padding-bottom: 5vh !important;
 }
 
 .car-image {

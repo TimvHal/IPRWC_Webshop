@@ -8,7 +8,10 @@ export class HttpService {
     public baseUrl: string = "http://www.localhost:8080/";
     public headers: HttpHeaders = new HttpHeaders({
         "Content-Type": "application/json",
-        "Accept": "application/json",
+        "Accept": "application/json"
+        // "Access-Control-Allow-Origin": "*",
+        // "Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
+        // "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
     });
 
     constructor(private http:HttpClient) {}

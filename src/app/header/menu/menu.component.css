@@ -15,12 +15,6 @@ li {
     transition: all 0.25s ease;
   }
   
-  li a:hover {
-    color: red;
-    transform: scale(1.1);
-    cursor: pointer;
-  }
-  
   .active {
     border-bottom: 3px solid red;
     cursor: pointer;
@@ -28,4 +22,23 @@ li {
 
   #login {
       margin-right: 1vw;
+  }
+
+  .btn, .btn-primary {
+    background-color: transparent;
+    border: none;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: center;
+    padding: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    transition: all 0.25s ease;
+  }
+
+  .btn:hover, .btn-primary:hover {
+    color: red;
+    transform: scale(1.1);
+    cursor: pointer;
   }

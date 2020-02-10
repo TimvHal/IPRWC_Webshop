@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="text">
+        <div class="article-id"><b>ID:</b> {{ order.articleId }}</div>
+        <div class="info">
+            <div class="row">
+                <div class="col-xs-6">
+                    <a class="name"><b>Ordered:</b> {{ order.name }}</a>
+                </div>
+                <div class="col-xs-6">
+                    <a class="price"><b>Price:</b> {{ order.price }} €</a>
+                </div>
+            </div>
+        </div>
+        <a class="status"><b>Status:</b> {{ order.orderStatus }}</a>
+        <div class="email"><b>Email:</b> {{ order.email }}</div>
+    </div>
+</div>

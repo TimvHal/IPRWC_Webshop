@@ -32,4 +32,11 @@ export class CartItemService {
             console.log(data.toString());
         });
     }
+
+    public emptyCart() {
+        this.httpService.delete('shoppingcart/all')
+        .subscribe(data => {
+            console.log(data.toString());
+        });
+    }
 }
